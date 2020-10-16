@@ -17,6 +17,9 @@ def show_supply():
 
 def buy():
     global water, milk, beans, disposable_cups, money
+    if disposable_cups < 1:
+        print("Sorry, not enough cups!")
+        return
     coffee_type = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:")
     if coffee_type == '1':
         if water < 250:
